@@ -91,7 +91,7 @@ getREF <- function(genome) {
     } else {
         
         GENOMES <- BSgenome::installed.genomes(
-            splitNameParts=TRUE)$provider_version
+            splitNameParts=TRUE)$genome
         if( length(GENOMES) ) 
             names(GENOMES) <- gsub('^BSgenome.', '', BSgenome::installed.genomes())
         if( !length(GENOMES) ) stop('No genomes installed!')
